@@ -3,7 +3,7 @@
 :root{
     /*Colors*/
 
-    --violet-blue-crayola: hsla(234, 50%, 64%, 1);
+    --violet-blue-crayola: #757ed1;
     --dark-cornflower-blue_a7: hsla(214, 88%, 27%, 0.07);
     --white: hsla(0, 0%, 100%, 1);
     --white_a3: hsla(0, 0%, 100%, 0.03);

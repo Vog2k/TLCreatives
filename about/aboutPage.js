@@ -105,4 +105,86 @@ const initAccordion = function(currentAccordion){
     accordionBtn.addEventListener("click", expandAccordion);
 }
 
-for(let i = 0, len = accordions.length; i < len; i++){initAccordion(accordions[i])}
+function nextStep() {
+    if (validateCurrentStep()) {
+      showNextStep();
+      updateReviewSection();
+    }
+  }
+
+  function prevStep() {
+    showPreviousStep();
+    updateReviewSection();
+  }
+
+  function showNextStep() {
+    const formSections = document.querySelectorAll('.form-section');
+    const formSteps = document.querySelectorAll('.form-steps span');
+    let currentStep = getCurrentStep();
+
+    formSections[currentStep].classList.remove('active');
+    formSteps[currentStep].classList.remove('active');
+    currentStep++;
+    formSections[currentStep].classList.add('active');
+    formSteps[currentStep].classList.add('active');
+  }
+
+  function showPreviousStep() {
+    const formSections = document.querySelectorAll('.form-section');
+    const formSteps = document.querySelectorAll('.form-steps span');
+    let currentStep = getCurrentStep();
+
+    formSections[currentStep].classList.remove('active');
+    formSteps[currentStep].classList.remove('active');
+    currentStep--;
+    formSections[currentStep].classList.add('active');
+    formSteps[currentStep].classList.add('active');
+  }
+
+  function getCurrentStep() {
+    return Array.from(document.querySelectorAll('.form-section')).findIndex((section) => section.classList.contains('active'));
+  }
+
+  function validateCurrentStep() {
+    const currentSection = document.querySelector('.form-section.active');
+    const formGroups = currentSection.querySelectorAll('.form-group');
+    let isValid = true;
+
+    formGroups.forEach((group) => {
+      const input = group.querySelector('input');
+      const errorMessage = group.querySelector('.error-message');
+
+      if (input.hasAttribute('required') && !input.value.trim()) {
+        group.classList.add('error');
+        errorMessage.textContent = 'This field is required.';
+        isValid = false;
+      } else if (input.type === 'email' && !isValidEmail(input.value)) {
+        group.classList.add('error');
+        errorMessage.textContent = 'Please enter a valid email address.';
+        isValid = false;
+      } else {
+        group.classList.remove('error');
+        errorMessage.textContent = '';
+      }
+    });
+
+    return isValid;
+  }
+
+  function isValidEmail(email) {
+    // Basic email validation regex
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  }
+
+  function updateReviewSection() {
+    const reviewSection = document.getElementById('review-section');
+    reviewSection.innerHTML = '';
+
+    const formData = new FormData(document.getElementById('contact-form'));
+    for (const [key, value] of formData.entries()) {
+      const reviewItem = document.createElement('div');
+      reviewItem.textContent = `${key.charAt(0).toUpperCase() + key.slice(1)}: ${value}`;
+      reviewSection.appendChild(reviewItem);
+    }
+  }

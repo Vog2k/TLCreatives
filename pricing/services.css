@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 
 :root{
     /*Colors*/
@@ -19,6 +20,15 @@
     --light-gray: hsla(0, 0%, 79%, 1);
     --blue-crayola: hsla(219, 72%, 56%, 1);
     --black-coral: hsla(220, 12%, 43%, 1);
+    --pinkish-red: #C35A74;
+    --medium-blue: #307BAA;
+    --greenish-blue: #53BAB5;
+    --bright-orange: #FF7445;
+    --white-smoke: #F5F5F4;
+    --white: #FFF;
+    --dark-gray: #7D7C7C;
+    --black: #000;
+
 
     /*Typography*/
 
@@ -1093,286 +1103,157 @@ input[type=text], select, textarea {
   }
 
 
-  .container2 {
-    background-color: white;
-    padding: 40px;
-    border-radius: 16px;
-    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.1);
-    width: 900px;
-  }
+/*Add below*/
 
-  /* Form Styles */
-  .form-header {
-    text-align: center;
-    margin-bottom: 40px;
-  }
 
-  .form-header h1 {
-    font-size: 36px;
-    font-weight: 600;
-    color: #333;
-    margin-bottom: 12px;
-  }
-
-  .form-header p {
-    font-size: 18px;
-    color: #666;
-    margin-top: 0;
-  }
-
-  .form-steps {
+  
+  .pricing-plans {
+    gap: 32px;
     display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
     justify-content: center;
-    margin-bottom: 40px;
+    width: 100%;
+    padding: 64px;
+    background-color: #171717;
   }
+  
+/* Pricing Card */
+.pricing-card {
+    --col: #e4e4e7;
+    position: relative;
+    min-width: 360px;
+    padding: 32px;
+    padding-bottom: 96px;
+    border-radius: 4px;
+    border: 5px solid #262626;
+    background-color: #c4c4c420;
+    box-shadow: 0 0 32px transparent;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-  .form-steps span {
-    padding: 12px 24px;
-    background-color: #e6e6e6;
-    border-radius: 8px;
-    margin: 0 12px;
-    cursor: pointer;
-    font-weight: 500;
-    color: #666;
+  
+.pricing-card.basic {
+    --col: #0891b2;
+  }
+  
+  .pricing-card.standard {
+    --col: #059669;
+  }
+  
+  .pricing-card.premium {
+    --col: #c026d3;
+  }
+  .pricing-card.premiumz {
+    --col: #ac0000;
+  }
+  
+  .pricing-card:hover {
+    border-color: var(--col);
+    background-color: #9e9e9e80;
+    box-shadow: 5px 0 32px #171717;
+    transform: translateY(-16px) scale(1.02);
+    transition: all 0.5s ease;
+  }
+  
+  .pricing-card > *:not(:last-child) {
+    margin-bottom: 32px;
+  }
+  
+  .pricing-card .heading h4 {
+    padding-bottom: 12px;
+    color: var(--white);
+    font-size: 24px;
+    font-weight: normal;
+  }
+  
+  .pricing-card .heading p {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: lighter;
+  }
+  
+  .pricing-card .price {
+    position: relative;
+    color: var(--white);
+    font-size: 40px;
+    font-weight: bold;
+  }
+  
+  .pricing-card .price sub {
+    position: absolute;
+    bottom: 14px;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: lighter;
+  }
+  
+  .pricing-card .features li {
+    padding-bottom: 16px;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: lighter;
+    text-align: left;
+  }
+  
+  .pricing-card .features li i,
+  .pricing-card .features li strong {
+    color: #ffffff;
+    font-size: 16px;
+    text-align: left;
+  }
+  
+  .pricing-card .features li strong {
+    padding-left: 0px;
+  }
+  
+  .pricing-card .cta-btn {
+    position: absolute;
+    bottom: 32px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    padding: 12px;
+    border-radius: 4px;
+    border: 1px solid var(--col);
+    background-color: var(--col);
+    color: #e4e4e7;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .pricing-card .cta-btn:active {
+    background-color: transparent;
+    color: var(--col);
     transition: all 0.3s ease;
   }
-
-  .form-steps span.active {
-    background-color:#8d8d8d;
-    color: white;
-  }
-
-  .form-section {
-    display: none;
-    animation: fadeIn 0.5s ease-in-out;
-  }
-
-  .form-section.active {
-    display: block;
-  }
-
-  @keyframes fadeIn {
-    0% {
-      opacity: 0;
-      transform: translateY(20px);
+  
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    .pricing-card {
+        min-width: 300px;
+        padding: 24px;
+        padding-bottom: 80px;
     }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+    .pricing-plans {
+        flex-direction: column;
+        padding: 32px;
     }
-  }
 
-  .form-group {
-    margin-bottom: 28px;
-  }
+    .pricing-card {
+        min-width: 100%;
+        padding: 20px;
+        padding-bottom: 64px;
+    }
+}
 
-  .form-group label {
-    display: block;
-    font-weight: 500;
-    margin-bottom: 10px;
-    color: #333;
-  }
-
-  .form-group input {
-    width: 100%;
-    padding: 14px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-size: 16px;
-    font-family: 'Montserrat', sans-serif;
-    transition: border-color 0.3s ease;
-  }
-
-  .form-group.error input {
-    border-color: #dc3545;
-  }
-
-  .form-group.error .error-message {
-    color: #dc3545;
-    font-size: 14px;
-    margin-top: 10px;
-  }
-
-  .btn2 {
-    display: block;
-    width: 100%;
-    padding: 14px;
-    background-color: #8d8d8d;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: 500;
-    font-family: 'Montserrat', sans-serif;
-    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-  }
-
-  .btn2:disabled {
-    background-color: #ccc;
-    cursor: not-allowed;
-  }
-
-  .btn2:hover {
-    background-color: var(--violet-blue-crayola);
-    transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
-  }
-
-  .btn2 i {
-    margin-left: 8px;
-  }
-
-  .btn-group {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 28px;
-  }
-
-  .btn-group button {
-    flex: 1;
-    margin: 0 12px;
-  }
-
-  #review-section {
-    margin-top: 28px;
-    border-top: 1px solid #e6e6e6;
-    padding-top: 28px;
-  }
-
-  #review-section div {
-    margin-bottom: 14px;
-    font-weight: 500;
-    color: #333;
-  }
-
-  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
-
-  *{
-      margin: 0;
-      padding: 0;
-      font-family: "Poppins", sans-serif;
-  }
-  
-  :root{
-      --pinkish-red: #C35A74;
-      --medium-blue: #307BAA;
-      --greenish-blue: #53BAB5;
-      --bright-orange: #FF7445;
-      --white-smoke: #F5F5F4;
-      --white: #FFF;
-      --dark-gray: #7D7C7C;
-      --black: #000;
-  }
-  
-  section{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-  
-
-  }
-  
-  .content{
-      display: flex;
-      justify-content: space-between;
-      width: 1200px;
-      margin: 100px;
-  }
-  
-  .box{
-      display: flex;
-      flex-direction: column;
-      height: 586px;
-      width: 300px;
-      border-radius: 20px;
-      margin-left: 10px;
-      margin-right: 10px;
-      
-      background: var(--white);
-      box-shadow: 0 1rem 2rem rgba(0, 0, 0, 20%);
-  }
-  
-  .title{
-      width: 100%;
-      padding: 10px 0;
-      font-size: 1.2em;
-      font-weight: lighter;
-      text-align: center;
-      border-top-left-radius: 20px;
-      border-top-right-radius: 20px;
-  
-      color: var(--white-smoke);
-  }
-  
-  .basic .title{
-      background: var(--pinkish-red);
-  }
-  
-  .standard .title{
-      background: var(--medium-blue);
-  }
-  
-  .business .title{
-      background: var(--greenish-blue);
-  }
-  
-  .view{
-      display: block;
-      width: 100%;
-      padding: 30px 0 20px;
-  
-      background: var(--white-smoke);
-  }
-  
-  .icon{
-      display: flex;
-      justify-content: center;
-  }
-  
-  .icon img{
-      width: 100px;
-  }
-  
-  .cost{
-      display: flex;
-      justify-content:center;
-      flex-direction: row;
-      margin-top: 10px;
-  }
-  
-  .amount{
-      font-size: 2.8em;
-      font-weight: bolder;
-  }
-  
-  .detail{
-      margin: auto 0 auto 5px;
-      width: 70px;
-      font-size: 0.7em;
-      font-weight: bold;
-      line-height: 15px;
-      color: #7D7C7C;
-  }
-  
-  .description{
-      margin: 30px auto;
-      font-size: 0.8em;
-      color: #7D7C7C;
-  }
-
-  
-  /* Responsiveness:Start */
-  @media screen and (max-width:970px) {
-      .content{
-          display: flex;
-          align-items: center;
-          flex-direction: column;
-          margin: 50px auto;
-      }
-      .standard, .business{
-          margin-top: 25px;
-      }
-  }
-  /* Responsiveness:End */
+@media (max-width: 480px) {
+    .pricing-card {
+        padding: 16px;
+        padding-bottom: 48px;
+    }
+}

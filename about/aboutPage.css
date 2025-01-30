@@ -665,7 +665,7 @@ video{width: 100%;
     padding: 10px 20px;
     text-decoration: none;
     color: rgb(0, 0, 0);
-    background-color: var(--violet-blue-crayola);
+    background-color: var(--black-coral);
     border: none;
     border-radius: 5px;
     transition: background-color 0.5s;
@@ -676,8 +676,8 @@ video{width: 100%;
 }
 
 .btn-outline {
-    background-color: white;
-    border: 2px solid white;
+    background-color: var(--violet-blue-crayola);
+    border: 2px solid rgb(255, 255, 255);
 }
 
 .btn-outline:hover {
@@ -1246,7 +1246,48 @@ input[type=text], select, textarea {
     color: #333;
   }
 
+  .about-section {
+    padding: 2rem 0;
+    text-align: center;
+}
 
+.about-section .container {
+    max-width: 60%;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
 
+.about-section h1, h2 {
+    font-size: 50px;
+    margin-bottom: 2rem;
+    padding: 10px 10px 10px 10px;
+}
+p {
+    font-size: 20px;
+    margin-bottom: 5rem;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+    }
+
+    .about-text {
+        text-align: center;
+    }
+}
+
+.about-img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 
 

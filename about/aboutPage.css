@@ -139,7 +139,7 @@ body.nav.active{overflow: hidden;}
     background-size: cover;
 }
 
-.h1, .h2, .h3, .h4, .h5{
+.h1, .h2, .h3, .h4{
     color: var(--charcoal);
     font-weight: var(--fw-700);
     line-height: 1.3;
@@ -157,7 +157,6 @@ body.nav.active{overflow: hidden;}
 
 .h4{font-size: var(--fs-4);}
 
-.h5{font-size: var(--fs-6);}
 
 
 
@@ -649,9 +648,7 @@ video{width: 100%;
 .input-field::placeholder {color: inherit;}
 
 /*t*/
-.h5 {
-    font-size: var(--fs-6);
-}
+
 
 .btn-wrapper {
     margin-top: 20px; /* Adjust as needed */
@@ -1252,7 +1249,7 @@ input[type=text], select, textarea {
 }
 
 .about-section .container {
-    max-width: 60%;
+    max-width: 50%;
     margin: 0 auto;
     padding: 0 1rem;
 }
@@ -1289,5 +1286,11 @@ p {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-
+h5 {
+    font-size: 50px;
+    padding-bottom: 0px;
+    color: var(--violet-blue-crayola);
+    color: #757ed1;
+    
+}
 

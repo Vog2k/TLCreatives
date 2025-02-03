@@ -1146,7 +1146,7 @@ input[type=text], select, textarea {
     --col: #c026d3;
   }
   .pricing-card.premiumz {
-    --col: #ac0000;
+    --col: #838383;
   }
   
   .pricing-card:hover {

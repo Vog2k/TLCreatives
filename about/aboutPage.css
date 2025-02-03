@@ -334,6 +334,9 @@ font-size: 50px;
     justify-content: center;
     align-items: center;
     gap: 12px;
+    padding: 0px 0px 100px;
+    
+    
 }
 
 .hero-slider, .hero-card{position: relative;}
@@ -662,7 +665,7 @@ video{width: 100%;
     padding: 10px 20px;
     text-decoration: none;
     color: rgb(0, 0, 0);
-    background-color: var(--black-coral);
+    background-color: var(--violet-blue-crayola);
     border: none;
     border-radius: 5px;
     transition: background-color 0.5s;
@@ -683,6 +686,7 @@ video{width: 100%;
 }
 
 .video-container {
+    pointer-events: none;
     position: relative;
     width: 100%;
     height: auto;

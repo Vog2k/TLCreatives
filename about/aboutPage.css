@@ -1297,4 +1297,22 @@ h5 {
     color: #757ed1;
     
 }
-
+.logo-light{
+    width: 100px;
+  }
+  
+  .logo-dark{
+    width: 100px;
+  }
+  
+  @media (max-width: 768px) {
+     .logo img {
+        width: 120px;
+    }
+  }
+  
+  @media (max-width: 450px) {
+    .logo img {
+        width: 50px;
+    }
+  }

@@ -1257,3 +1257,22 @@ input[type=text], select, textarea {
         padding-bottom: 48px;
     }
 }
+.logo-light{
+    width: 100px;
+  }
+  
+  .logo-dark{
+    width: 100px;
+  }
+  
+  @media (max-width: 768px) {
+     .logo img {
+        width: 120px;
+    }
+  }
+  
+  @media (max-width: 450px) {
+    .logo img {
+        width: 50px;
+    }
+  }

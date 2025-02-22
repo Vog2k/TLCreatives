@@ -664,7 +664,7 @@ video{width: 100%;
     z-index: 1;
     padding: 10px 20px;
     text-decoration: none;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     background-color: var(--violet-blue-crayola);
     border: none;
     border-radius: 5px;

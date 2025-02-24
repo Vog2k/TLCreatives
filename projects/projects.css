@@ -925,12 +925,10 @@ video{width: 100%;
     border: 1px solid;
     line-height: normal;
     transition: all 0.1s;
+    cursor: default;
   }
   
-  .posts .post-categories a:hover {
-    background: var(--violet-blue-crayola);
-    color: var(--white);
-  }
+
   
   /* FILTERING RULES
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -938,6 +936,7 @@ video{width: 100%;
   *:has([value="HTML"]:checked) .filters [for="HTML"],
   *:has([value="Shopify"]:checked) .filters [for="Shopify"],
   *:has([value="Editing"]:checked) .filters [for="Editing"],
+  *:has([value="Figma"]:checked) .filters [for="Figma"],
   *:has([value="WordPress"]:checked) .filters [for="WordPress"],
   *:has([value="Branding"]:checked) .filters [for="Branding"],
   *:has([value="LogosAndDesigns"]:checked) .filters [for="LogosAndDesigns"]{
@@ -949,6 +948,7 @@ video{width: 100%;
   :has([value="HTML"]:checked) .posts [data-category~="HTML"],
   *:has([value="Shopify"]:checked) .posts [data-category~="Shopify"],
   *:has([value="Editing"]:checked) .posts [data-category~="Editing"],
+  *:has([value="Figma"]:checked) .posts [data-category~="Figma"],
   *:has([value="WordPress"]:checked) .posts [data-category~="WordPress"],
   *:has([value="Branding"]:checked) .posts [data-category~="Branding"],
   *:has([value="LogosAndDesigns"]:checked) .posts [data-category~="LogosAndDesigns"]{

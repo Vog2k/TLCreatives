@@ -1635,3 +1635,8 @@ input[type=text], select, textarea {
       height: 200px;
   }
 }
+.feature-banner video {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}

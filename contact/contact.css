@@ -1234,17 +1234,7 @@ input[type=text], select, textarea {
     margin: 0 12px;
   }
 
-  #review-section {
-    margin-top: 28px;
-    border-top: 1px solid #e6e6e6;
-    padding-top: 28px;
-  }
 
-  #review-section div {
-    margin-bottom: 14px;
-    font-weight: 500;
-    color: #333;
-  }
 
 
   @import url('https://fonts.googleapis.com/css?family=Heebo:400,700|Open+Sans:400,700');

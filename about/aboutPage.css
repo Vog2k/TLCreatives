@@ -672,7 +672,7 @@ video{width: 100%;
 }
 
 .btn:hover {
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
 }
 
 .btn-outline {
@@ -1264,7 +1264,7 @@ input[type=text], select, textarea {
     padding: 10px 10px 10px 10px;
 }
 p {
-    font-size: 20px;
+    font-size: 16px;
     margin-bottom: 5rem;
 }
 

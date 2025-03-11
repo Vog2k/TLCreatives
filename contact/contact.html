@@ -38,7 +38,7 @@
                     <li><a href="/projects/projects.html" class="navbar-link">Projects</a></li>
                     <li><a href="/blog/blog.html" class="navbar-link">Blog</a></li>
                     <div class="current-page"><li><a href="/contact/contact.html" class="navbar-link">Contact</a></li></div>  
-                    <li><a href="/pricing/services.html" class="navbar-link">Service</a></li>
+                    <li><a href="/pricing/services.html" class="navbar-link">Services</a></li>
 
                 </ul>
 
@@ -118,8 +118,9 @@
     <section class="section feature" aria-labelledby="feature-label">
         <div class="container">
             <figure class="feature-banner">
-                <img src="/images/uivector1.jpg" alt="feature banner" width="800" height="531" loading="lazy" class="w-100">
-            </figure>
+                <video autoplay muted loop>
+                    <source src="/images/contact-page.mp4" type="video/mp4">
+                </video>            </figure>
 
             <div class="feature-content">
                 <p class="section-subtitle" id="feature-label">We're Here to Help</p>
@@ -134,56 +135,101 @@
         <!--026a212a-3b9f-4427-9ea0-0f22681e0ca1-->
     </section>
 
-    <div class="flex items-center min-h-screen bg-gray-50 dark:bg-gray-900">
-        <div class="container mx-auto">
-          <div class="max-w-md mx-auto my-10 bg-white p-5 rounded-md shadow-sm">
-            <div class="text-center">
-              <h1 class="my-3 text-3xl font-semibold text-gray-700 dark:text-gray-200">
-                Contact Us
-              </h1>
-              <p class="text-gray-400 dark:text-gray-400">
-                Fill up the form below to send us a message.
-              </p>
+
+    <h2 class="contact-div">Get in touch with us today!</h2>
+    <section class="contact-section">
+      <div class="contact-container">
+        <div class="contact-image">
+          <img src="/images/3.png" alt="Contact Image">
+        </div>
+        <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="026a212a-3b9f-4427-9ea0-0f22681e0ca1" />
+          <input type="hidden" name="subject" value="New Contact Form Submission from Web3Forms" />
+          <input type="hidden" name="from_name" value="My Website" />
+          <!-- More customization options available in the docs: https://docs.web3forms.com -->
+          <div class="form-group-container">
+            <div class="form-group">
+              <label for="name" class="form-label">Name</label>
+              <input id="name" name="name" class="form-input" placeholder="Your name" type="text" />
             </div>
-            <div class="m-7">
-              <form action="https://api.web3forms.com/submit" method="POST" id="form">
-                <input type="hidden" name="access_key" value="026a212a-3b9f-4427-9ea0-0f22681e0ca1" />
-                <input type="hidden" name="subject" value="New Submission from Web3Forms" />
-                <input type="checkbox" name="botcheck" id="" style="display: none;" />
-      
-                <div class="mb-6">
-                  <label for="name" class="block mb-2 text-sm text-gray-600 dark:text-gray-400">Full Name</label>
-                  <input type="text" name="name" id="name" placeholder="John Doe" required class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" />
-                </div>
-                <div class="mb-6">
-                  <label for="email" class="block mb-2 text-sm text-gray-600 dark:text-gray-400">Email Address</label>
-                  <input type="email" name="email" id="email" placeholder="you@company.com" required class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" />
-                </div>
-                <div class="mb-6">
-                  <label for="phone" class="text-sm text-gray-600 dark:text-gray-400">Phone Number</label>
-                  <input type="text" name="phone" id="phone" placeholder="64+" required class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" />
-                </div>
-                <div class="mb-6">
-                  <label for="message" class="block mb-2 text-sm text-gray-600 dark:text-gray-400">Your Message</label>
-      
-                  <textarea rows="5" name="message" id="message" placeholder="Your Message" class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" required></textarea>
-                </div>
-                <div class="mb-6">
-                  <button type="submit" class="w-full px-3 py-4 text-white bg-indigo-500 rounded-md focus:bg-indigo-600 focus:outline-none">
-                    Send Message
-                  </button>
-                </div>
-                <p class="text-base text-center text-gray-400" id="result"></p>
-              </form>
+            <div class="form-group">
+              <label for="email" class="form-label">Email</label>
+              <input id="email" name="email" class="form-input" placeholder="Your email" type="email" />
+            </div>
+            <div class="form-group">
+              <label for="phone" class="form-label">Phone</label>
+              <input id="phone" name="phone" class="form-input" placeholder="02123456789" type="text" />
+            </div>
+            <div class="form-group">
+              <label for="message" class="form-label">Message</label>
+              <textarea class="form-textarea" id="message" name="message" placeholder="Your message"></textarea>
             </div>
           </div>
-        </div>
+          <button class="form-submit" type="submit">Send Message</button>
+        </form>
       </div>
+    </section>
 
-    <section class="info">
+    <section class="section feature" aria-labelledby="feature-label">
+        <div class="container">
+            <figure class="feature-banner">
+                <video autoplay muted loop>
+                    <source src="/images/conatc-values.mp4" type="video/mp4">
+                </video>            </figure>
 
+            <div class="feature-content">
+                <p class="section-subtitle" id="feature-label"></p>
 
-      </section>
+                <h2 class="h2 section-title">Our values</h2>
+
+                <p class="section-text">
+                    At TLDigitalDesigns, our values are rooted in making a positive impact through creative design. We are passionate about supporting new businesses, not-for-profit organizations, and businesses that strive to create better lives for their owners and communities. We believe in promoting cultural representation for all cultures, ensuring diverse voices are seen and heard. Our commitment extends to helping Pacific Islanders, who are often overlooked, by providing opportunities and amplifying their stories. We prioritize creativity, integrity, collaboration, and delivering high-quality work that aligns with our mission to uplift and empower those we work with.
+                </p>
+
+                <ul class="feature-list">
+                    <li>
+                        <div class="feature-card">
+                            <div class="card-icon">
+                                <ion-icon name="checkmark" aria-hidden="true"></ion-icon>
+                            </div>
+
+                            <span class="span"> <h3>Support for New Businesses</h3>We are passionate about helping new businesses thrive by providing affordable and impactful design solutions that set them up for success.</span>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="feature-card">
+                            <div class="card-icon">
+                                <ion-icon name="checkmark" aria-hidden="true"></ion-icon>
+                            </div>
+
+                            <span class="span"><h3>Empowering Non-Profits</h3>We believe in giving back to the community by offering tailored services to not-for-profit organizations, helping them amplify their message and achieve their goals.</span>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="feature-card">
+                            <div class="card-icon">
+                                <ion-icon name="checkmark" aria-hidden="true"></ion-icon>
+                            </div>
+
+                            <span class="span"><h3>Uplifting Businesses with Purpose</h3>We value working with businesses that strive to create a better life for their owners and communities, supporting their vision with thoughtful and effective design.</span>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="feature-card">
+                            <div class="card-icon">
+                                <ion-icon name="checkmark" aria-hidden="true"></ion-icon>
+                            </div>
+
+                            <span class="span"><h3>Promoting Cultural Representation</h3>celebrate and promote cultural diversity by creating designs that honor and reflect the rich variety of cultures in our communities.</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
 
      
 </body>

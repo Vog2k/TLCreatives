@@ -1246,6 +1246,7 @@ input[type=text], select, textarea {
 .accordion h1 {
     font-size: 32px;
     text-align: center;
+    color: var(--violet-blue-crayola);
 }
 .accordion-item {
     margin-top: 16px;
@@ -1315,3 +1316,22 @@ input[type=text], select, textarea {
 
 
 
+.logo-light{
+    width: 100px;
+  }
+  
+  .logo-dark{
+    width: 100px;
+  }
+  
+  @media (max-width: 768px) {
+     .logo img {
+        width: 120px;
+    }
+  }
+  
+  @media (max-width: 450px) {
+    .logo img {
+        width: 50px;
+    }
+  }
